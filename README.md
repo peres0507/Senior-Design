@@ -1,6 +1,7 @@
 # Senior-Design
 Data Mining and Visualizing Public Transportation Delays
-
+![alt text](https://github.com/riyadhhossain01/Senior-Design/blob/master/Bus%20Delayed%20Stops%20_%20Data%20Visualization.gif)
+    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 Data Mining and Visualizing Public Transportation Delays
  (December 2018)
  Ronak Etemadpour (Assistant Professor, CS Dept.), Riyadh Hossain (Computer Engr Student, CCNY), Husnain Baig (Computer Engr Student, CCNY), Jannatul Ferdous Brishty (Computer Engr Student, CCNY), Sadia Sakandar (Computer Engr Student, CCNY), Mostafizur Rahman (CS Student, CCNY)
