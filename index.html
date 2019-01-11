@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Bus Waiting Time Comparison</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- D3 JS -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+      integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+      crossorigin=""
+    ></script>
+    <!-- Script JS -->
+    <script src="main.js"></script>
+    <script src="barchart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- Left panel -->
+        <div class="col-md-6">
+          <!-- Introduction -->
+          <div class="row">
+            <div class="col-md-10">
+              <div id="introduction">
+                <h1>Bus Waiting Time Comparison</h1>
+                <p>
+                  This visualization compares bus waiting time of M100 and M101
+                  buses collected at their 27 common stops.
+                </p>
+                <p>
+                  A two-sample t-test assuming unequal variances is used to test
+                  the null hypothesis that the wait time for M100 bus and that
+                  for M101 bus are the same. The calculated p-value is 0.015.
+                  Because it is less than the chosen level of significance 0.05,
+                  the null hypothesis is rejected.
+                </p>
+                <p>
+                  Click a marker on the map to see the distribution of the
+                  waiting times and the average waiting time at that specific
+                  bus stop for M100 and M101 buses.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 1D Scatter Line Chart -->
+          <div class="row">
+            <div class="col"><div id="scatterLineChart"></div></div>
+          </div>
+          <div class="row">
+            <div class="col"><div id="scatterLineChartPTest"></div></div>
+          </div>
+          <div class="row">
+            <div class="col"><div class="col-md-15">
+              <h1>T - value Test</h1>
+              <p>
+                The following visualization test's the bus waiting time of M100 and M101
+                buses collected at their 27 common stops.
+              </p>
+            </div>
+          </div></div>
+          <div class="row">
+            <div class="col"><div id="barChartPTest"></div></div>
+          </div>
+          <a href="bubble_chart.html">
+            <div id="CHART">
+              <input type="button" class="button_chart" value="CHART" style="display: inline">
+            </div>
+          </a>
+          <a href="linechart.html">
+            <div id="LINECHART_input">
+              <input type="button" class="button_linechart" value="LINECHART" style="display: inline">
+            </div>
+          </a>
+        </div>
+        <!-- Right panel -->
+        <div class="col-md-6"><div id="busStopMap"></div></div>
+      </div>
+      <div style="visibility:hidden"><span id="int1">1</span> vs <span id="int2">2</span> vs <span id="pvalue"></span></div>
+    </div>
+
+  </body>
+</html>
